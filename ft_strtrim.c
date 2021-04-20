@@ -6,14 +6,13 @@
 /*   By: hkono <hkono@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 02:17:34 by hkono             #+#    #+#             */
-/*   Updated: 2020/12/05 11:37:39 by hkono            ###   ########.fr       */
+/*   Updated: 2021/04/12 19:41:30 by hkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-static int		set_is(char const c, char const *set)
+static int	set_is(char const c, char const *set)
 {
 	int		set_i;
 
@@ -44,7 +43,7 @@ static size_t	trim_strlen(char const *s1, char const *set)
 	return (end - begin);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim_s;
 	size_t	ts_i;

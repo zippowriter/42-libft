@@ -6,11 +6,10 @@
 /*   By: hkono <hkono@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 13:29:21 by hkono             #+#    #+#             */
-/*   Updated: 2020/12/10 19:02:11 by hkono            ###   ########.fr       */
+/*   Updated: 2021/04/09 09:25:54 by hkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -26,7 +25,7 @@ char	*ft_strchr(const char *s, int c)
 			return (str);
 		str++;
 	}
-	if (c == '\0')
-		return (str);
+	if (cc == '\0')
+		return (NULL);
 	return (NULL);
 }

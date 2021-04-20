@@ -6,13 +6,13 @@
 /*   By: hkono <hkono@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 13:31:00 by hkono             #+#    #+#             */
-/*   Updated: 2020/12/05 11:42:36 by hkono            ###   ########.fr       */
+/*   Updated: 2021/04/12 19:40:15 by hkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 

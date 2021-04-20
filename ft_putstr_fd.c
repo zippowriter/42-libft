@@ -6,11 +6,10 @@
 /*   By: hkono <hkono@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 14:10:55 by hkono             #+#    #+#             */
-/*   Updated: 2020/12/05 11:41:06 by hkono            ###   ########.fr       */
+/*   Updated: 2020/11/24 18:15:49 by hkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)

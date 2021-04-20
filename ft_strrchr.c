@@ -6,7 +6,7 @@
 /*   By: hkono <hkono@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 13:35:13 by hkono             #+#    #+#             */
-/*   Updated: 2020/12/05 11:42:46 by hkono            ###   ########.fr       */
+/*   Updated: 2020/11/23 22:08:23 by hkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int		i;
 
 	i = 0;
 	while (s[i])

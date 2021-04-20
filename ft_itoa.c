@@ -6,11 +6,10 @@
 /*   By: hkono <hkono@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 10:33:09 by hkono             #+#    #+#             */
-/*   Updated: 2020/12/05 11:33:02 by hkono            ###   ########.fr       */
+/*   Updated: 2021/04/16 16:47:26 by hkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static int	get_digits(int n)
@@ -18,7 +17,9 @@ static int	get_digits(int n)
 	unsigned int	proxy;
 	int				digits;
 
-	proxy = n < 0 ? -n : n;
+	proxy = n;
+	if (n < 0)
+		proxy *= -1;
 	digits = 0;
 	while (proxy > 0)
 	{
@@ -30,20 +31,27 @@ static int	get_digits(int n)
 	return (digits);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char			*str;
 	unsigned int	proxy;
 	int				digits;
+	int				thresh;
 
 	digits = get_digits(n);
-	if (!(str = (char *)malloc(sizeof(char) * (digits + 1))))
+	str = (char *)malloc(sizeof(char) * (digits + 1));
+	if (str == NULL)
 		return (NULL);
 	str[digits] = '\0';
-	proxy = n < 0 ? -n : n;
+	proxy = n;
+	thresh = 0;
 	if (n < 0)
+	{
+		proxy *= -1;
 		str[0] = '-';
-	while (digits > (n < 0 ? 1 : 0))
+		thresh = 1;
+	}
+	while (digits > thresh)
 	{
 		str[--digits] = (proxy % 10) + '0';
 		proxy /= 10;

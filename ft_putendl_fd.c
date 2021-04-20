@@ -6,11 +6,10 @@
 /*   By: hkono <hkono@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 14:31:50 by hkono             #+#    #+#             */
-/*   Updated: 2020/12/05 11:34:04 by hkono            ###   ########.fr       */
+/*   Updated: 2020/11/23 22:00:23 by hkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)

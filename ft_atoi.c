@@ -6,13 +6,13 @@
 /*   By: hkono <hkono@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 13:23:46 by hkono             #+#    #+#             */
-/*   Updated: 2020/11/23 21:51:25 by hkono            ###   ########.fr       */
+/*   Updated: 2021/04/19 17:50:30 by hkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int			i;
 	long long	n;

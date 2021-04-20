@@ -6,13 +6,13 @@
 /*   By: hkono <hkono@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 13:26:53 by hkono             #+#    #+#             */
-/*   Updated: 2020/12/05 11:41:51 by hkono            ###   ########.fr       */
+/*   Updated: 2021/04/12 19:27:23 by hkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*buf1;
 	unsigned char	*buf2;

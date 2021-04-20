@@ -6,11 +6,10 @@
 /*   By: hkono <hkono@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 13:21:24 by hkono             #+#    #+#             */
-/*   Updated: 2020/12/05 11:34:51 by hkono            ###   ########.fr       */
+/*   Updated: 2021/04/12 19:37:12 by hkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static size_t	require_array_num(char const *s, char c)
@@ -31,17 +30,18 @@ static size_t	require_array_num(char const *s, char c)
 	return (an);
 }
 
-static char		*ft_strndup(char const *s, size_t n)
+static char	*ft_strndup(char const *s, size_t n)
 {
 	char	*str;
 
-	if (!(str = (char *)malloc(sizeof(char) * n)))
+	str = (char *)malloc(sizeof(char) * n);
+	if (str == NULL)
 		return (NULL);
 	ft_strlcpy(str, s, n);
 	return (str);
 }
 
-static char		**make_split(char const *s, char c, char **strs, size_t an)
+static char	**make_split(char const *s, char c, char **strs, size_t an)
 {
 	size_t	strs_i;
 	size_t	s_i;
@@ -68,7 +68,7 @@ static char		**make_split(char const *s, char c, char **strs, size_t an)
 	return (strs);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**strs;
 	size_t	an;
@@ -76,7 +76,8 @@ char			**ft_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	an = require_array_num(s, c);
-	if (!(strs = (char **)malloc(sizeof(char *) * (an + 1))))
+	strs = (char **)malloc(sizeof(char *) * (an + 1));
+	if (strs == NULL)
 		return (NULL);
 	strs = make_split(s, c, strs, an + 1);
 	if (strs == NULL)
