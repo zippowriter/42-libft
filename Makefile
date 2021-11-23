@@ -6,7 +6,7 @@
 #    By: hkono <hkono@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 23:11:58 by hkono             #+#    #+#              #
-#    Updated: 2021/11/22 23:28:27 by hkono            ###   ########.fr        #
+#    Updated: 2021/11/23 13:11:50 by hkono            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,12 +59,12 @@ BOBJS = ft_lstnew.o \
 
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
-INCLUDES = -I.
-
-.SUFFIXES: .c .o
+INCLUDES = -I../includes
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+
+.SUFFIXES: .c .o
 
 .c.o:
 	$(CC) $(FLAGS) -c $< $(INCLUDES)
@@ -72,14 +72,14 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 clean:
-	-rm -rf $(OBJS) $(BOBJS)
+	rm -f $(OBJS) $(BOBJS)
 
 fclean: clean
-	-rm -rf $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
-bonus: 	$(OBJS) $(BOBJS)
+bonus: $(OBJS) $(BOBJS)
 	ar rcs $(NAME) $(OBJS) $(BOBJS)
 
 .PHONEY = all clean fclean re bonus
