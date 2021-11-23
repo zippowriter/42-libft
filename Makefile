@@ -6,7 +6,7 @@
 #    By: hkono <hkono@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 23:11:58 by hkono             #+#    #+#              #
-#    Updated: 2021/11/23 13:11:50 by hkono            ###   ########.fr        #
+#    Updated: 2021/11/23 16:05:30 by hkono            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ FLAGS = -Wall -Wextra -Werror
 INCLUDES = -I../includes
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	$(AR) rcs $(NAME) $(OBJS)
 
 .SUFFIXES: .c .o
 
@@ -72,14 +72,14 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 clean:
-	rm -f $(OBJS) $(BOBJS)
+	$(RM) $(OBJS) $(BOBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
 bonus: $(OBJS) $(BOBJS)
-	ar rcs $(NAME) $(OBJS) $(BOBJS)
+	$(AR) rcs $(NAME) $(OBJS) $(BOBJS)
 
 .PHONEY = all clean fclean re bonus
